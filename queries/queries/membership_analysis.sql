@@ -1,0 +1,5 @@
+-- Membership dates for paid customers
+SELECT M.START_DATE, M.END_DATE
+FROM MEMBERSHIP M
+JOIN PAYMENT P ON M.C_ID = P.C_ID
+WHERE P.PAYMENT_STATUS = 'Paid';
